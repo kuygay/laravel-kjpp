@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\FooController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +32,4 @@ Route::get('/home', function () {
 
 Route::get('/foo', [FooController::class, 'index']);
 
-Route::get('/baz', [FooController::class, 'getKJPP']);
+Route::get('/kjpp', [FooController::class, 'getKJPP']);
