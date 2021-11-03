@@ -18,11 +18,17 @@ class FooController extends Controller
 
     public function getKJPP() {
         $rows = DB::select("
-            SELECT cab_dr_kjpp, no_izin, tgl_izin FROM tbl_cabkjpp LIMIT 20
-        ", []);
+            SELECT id, nama_kjpp, no_induk, no_izin_kjpp 
+            FROM tbl_pstkjpp 
+            WHERE id IS NOT NULL
+            LIMIT 20
+        ", [
+            
+        ]);
 
         // dd($rows);
         $data = [
+            'i' => 1,
             'items' => $rows
         ];
 
