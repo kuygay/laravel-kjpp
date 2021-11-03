@@ -18,7 +18,7 @@ class FooController extends Controller
 
     public function getKJPP() {
         $rows = DB::select("
-            SELECT cab_dr_kjpp, no_izin, tgl_izin FROM tbl_cabkjpp LIMIT 10
+            SELECT cab_dr_kjpp, no_izin, tgl_izin FROM tbl_cabkjpp LIMIT 20
         ", []);
 
         // dd($rows);
