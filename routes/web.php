@@ -26,10 +26,10 @@ Route::get('/home', function () {
     ];
 });
 
-Route::get('/db', function () {
-    $rows = DB::select("select * from tbl_pp limit 10", []);
-    dd($rows);
-});
+// Route::get('/db', function () {
+//     $rows = DB::select("select * from tbl_pp limit 10", []);
+//     dd($rows);
+// });
 
 Route::get('/foo', [FooController::class, 'index']);
 
